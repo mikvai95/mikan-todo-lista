@@ -1,0 +1,99 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#bg {
+    height: 100vh;
+    background-image: url(../Kuvat/noticeboard.PNG);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    
+}
+
+.container {
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-image: url(../Kuvat/ruutupaperi.PNG);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#uusiTehtava input {
+    width: 75%;
+    height: 45px;
+    font-family: fantasy;
+    font-size: 20px;
+    padding: 10px;
+    position: relative;
+    border-style: double 10px;
+    text-align: center;
+}
+
+#uusiTehtava button {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, black, purple);
+    transition-duration: 0.5s;
+}
+
+#uusiTehtava button:hover {
+    background-image: linear-gradient(to bottom, white, green);
+    color: black;
+}
+
+#tehtavatnakyytassa {
+    background-image: url(../Kuvat/ruutupaperi.PNG);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.tehtava {
+    background-image: linear-gradient( rgba(255, 253, 253, 0.7), rgba(0, 0, 0, 0.7) );
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px black;
+    cursor: pointer;
+}
+
+.tehtava button {
+    background-image: linear-gradient(to bottom, black, purple);
+    color: white;
+    height: 100%;
+    width: 25%;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.tehtava button:hover {
+    background-image: linear-gradient(to bottom, white, green);
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 4px #000000; 
+}
+
+/* Kun checkbox laitetaan ruksi, se laittaa viivan kyseisen tehtävän yli. Kun ruksi otetaan pois, viivakin lähtee pois */
+.suoritettu:checked + #tehtavanimi {
+    text-decoration: line-through;
+}
